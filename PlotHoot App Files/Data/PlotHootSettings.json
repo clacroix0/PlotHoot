@@ -1,0 +1,1113 @@
+﻿{
+    "App":  "PlotHoot",
+    "Version":  "1.0.03",
+    "SavedAt":  "2026-06-30T08:13:56",
+    "ScorePassPercent":  "90",
+    "MaxPointLoss":  "",
+    "PlotPointTotal":  "",
+    "TreePointTotal":  "",
+    "RegenPointTotal":  "",
+    "ExecutionPointTotal":  "",
+    "UseStemCountPercentageForScoring":  true,
+    "StemToleranceBands":  [
+                               {
+                                   "Key":  "100plus",
+                                   "Label":  "100+ stems",
+                                   "Min":  100,
+                                   "Max":  null,
+                                   "Tolerance":  20
+                               },
+                               {
+                                   "Key":  "51to99",
+                                   "Label":  "51-99 stems",
+                                   "Min":  51,
+                                   "Max":  99,
+                                   "Tolerance":  15
+                               },
+                               {
+                                   "Key":  "30to50",
+                                   "Label":  "30-50 stems",
+                                   "Min":  30,
+                                   "Max":  50,
+                                   "Tolerance":  7
+                               },
+                               {
+                                   "Key":  "11to29",
+                                   "Label":  "11-29 stems",
+                                   "Min":  11,
+                                   "Max":  29,
+                                   "Tolerance":  3
+                               },
+                               {
+                                   "Key":  "2to10",
+                                   "Label":  "2-10 stems",
+                                   "Min":  2,
+                                   "Max":  10,
+                                   "Tolerance":  1
+                               },
+                               {
+                                   "Key":  "0to1",
+                                   "Label":  "0-1 stems",
+                                   "Min":  0,
+                                   "Max":  1,
+                                   "Tolerance":  0
+                               }
+                           ],
+    "FieldOrder":  [
+                       {
+                           "FieldKey":  "Plot|Plots|PlotNumber",
+                           "Order":  0
+                       },
+                       {
+                           "FieldKey":  "Tree|PlotHoot QA|TreeFound",
+                           "Order":  0
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|Aspect",
+                           "Order":  1
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|ChristmasTreeGrade",
+                           "Order":  1
+                       },
+                       {
+                           "FieldKey":  "Tree|Trees|TreeNumber",
+                           "Order":  2
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|SlopePercent",
+                           "Order":  2
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|TreeHistory",
+                           "Order":  3
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|UTMNorthingCoordinate",
+                           "Order":  3
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|SlopePosition",
+                           "Order":  4
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|IDBH",
+                           "Order":  4
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|UTMEastingCoordinate",
+                           "Order":  5
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|TotalHeight",
+                           "Order":  5
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|Crew",
+                           "Order":  6
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|MinorPlot",
+                           "Order":  6
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|UTMZone",
+                           "Order":  7
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|BDFTDefect",
+                           "Order":  7
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|StemCount",
+                           "Order":  8
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|DensityClass",
+                           "Order":  8
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|CoverType",
+                           "Order":  9
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|TreeAgeCode",
+                           "Order":  9
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|MeasurementDate",
+                           "Order":  10
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|HabitatType",
+                           "Order":  10
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Severity2",
+                           "Order":  10
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|PlotStatus",
+                           "Order":  11
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|CrownRatio",
+                           "Order":  11
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|RemarksPlot",
+                           "Order":  12
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|DMR",
+                           "Order":  12
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|CornerPost",
+                           "Order":  13
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SIAge",
+                           "Order":  13
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Problem2",
+                           "Order":  14
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SIDBH",
+                           "Order":  14
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Problem1",
+                           "Order":  15
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SISpecies",
+                           "Order":  15
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|CUFTDefect",
+                           "Order":  16
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SITotalHeight",
+                           "Order":  16
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SizeClass",
+                           "Order":  17
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|LinePost",
+                           "Order":  17
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StandAge",
+                           "Order":  18
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Severity1",
+                           "Order":  18
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|CrownClass",
+                           "Order":  19
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StandClass",
+                           "Order":  19
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|PinyonNutProd",
+                           "Order":  20
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StockabilityFactor",
+                           "Order":  20
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StockabilityPct",
+                           "Order":  21
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|RadialIncrement",
+                           "Order":  21
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2Number",
+                           "Order":  22
+                       },
+                       {
+                           "FieldKey":  "Tree|Trees|SpeciesCode",
+                           "Order":  22
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SIGrowth",
+                           "Order":  23
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|DisturbanceHistory",
+                           "Order":  23
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|SnagClass",
+                           "Order":  23
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|FuelModel",
+                           "Order":  24
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeCustomMeasurements|TreeGrade",
+                           "Order":  24
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|RemarksTree",
+                           "Order":  25
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2Azimuth",
+                           "Order":  25
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|StandDMRating1",
+                           "Order":  25
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1DBH",
+                           "Order":  26
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|StandDMSpecies1",
+                           "Order":  26
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2Species",
+                           "Order":  27
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|StandDMSpecies2",
+                           "Order":  27
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|StandDMSpecies3",
+                           "Order":  28
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1SlopeDist",
+                           "Order":  28
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|UnderCoverType",
+                           "Order":  29
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2SlopeDist",
+                           "Order":  30
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|UnderDensityClass",
+                           "Order":  31
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1Azimuth",
+                           "Order":  32
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|UnderSizeClass",
+                           "Order":  33
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1Species",
+                           "Order":  34
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2DBH",
+                           "Order":  35
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1Number",
+                           "Order":  36
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|Elevation",
+                           "Order":  37
+                       }
+                   ],
+    "ExcludedFields":  [
+
+                       ],
+    "Tolerances":  [
+                       {
+                           "FieldKey":  "Execution|TableD|GpsCoordinatesAccuracy",
+                           "Group":  "Execution",
+                           "TableName":  "TableD",
+                           "FieldName":  "GpsCoordinatesAccuracy",
+                           "Label":  "GPS Coordinates 30\u0027 Accuracy (UTMs N/E/Zone)",
+                           "Mode":  "GoodFairPoor",
+                           "Value":  "Good=0; Fair=0; Poor=0",
+                           "PointValue":  "0",
+                           "CriticalFail":  true
+                       },
+                       {
+                           "FieldKey":  "Execution|TableD|PlotReferenceTreeDistanceAzimuth",
+                           "Group":  "Execution",
+                           "TableName":  "TableD",
+                           "FieldName":  "PlotReferenceTreeDistanceAzimuth",
+                           "Label":  "Plot Reference Tree(s) distance and azimuth provided/correct",
+                           "Mode":  "GoodFairPoor",
+                           "Value":  "Good=0; Fair=1; Poor=2",
+                           "PointValue":  "2",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Execution|TableD|PlotReferenceTreeSelection",
+                           "Group":  "Execution",
+                           "TableName":  "TableD",
+                           "FieldName":  "PlotReferenceTreeSelection",
+                           "Label":  "Plot Reference Tree(s) Selection",
+                           "Mode":  "GoodFairPoor",
+                           "Value":  "Good=0; Fair=1; Poor=2",
+                           "PointValue":  "2",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Execution|TableD|PlotReferenceTreesMonumented",
+                           "Group":  "Execution",
+                           "TableName":  "TableD",
+                           "FieldName":  "PlotReferenceTreesMonumented",
+                           "Label":  "Plot Reference Tree(s) clearly monumented (tags, nailing)",
+                           "Mode":  "GoodFairPoor",
+                           "Value":  "Good=0; Fair=1; Poor=2",
+                           "PointValue":  "2",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Execution|TableD|SiteTreesMonumented",
+                           "Group":  "Execution",
+                           "TableName":  "TableD",
+                           "FieldName":  "SiteTreesMonumented",
+                           "Label":  "Site Tree(s) clearly monumented (tags, nailing)",
+                           "Mode":  "GoodFairPoor",
+                           "Value":  "Good=0; Fair=1; Poor=2",
+                           "PointValue":  "2",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Execution|TableD|StartingPointDistanceAzimuth",
+                           "Group":  "Execution",
+                           "TableName":  "TableD",
+                           "FieldName":  "StartingPointDistanceAzimuth",
+                           "Label":  "Starting Point distance and azimuth provided/correct",
+                           "Mode":  "GoodFairPoor",
+                           "Value":  "Good=0; Fair=1; Poor=2",
+                           "PointValue":  "2",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|FuelModel",
+                           "Group":  "Plot",
+                           "TableName":  "PlotCustomMeasurements",
+                           "FieldName":  "FuelModel",
+                           "Label":  "Fuel Model",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|UnderCoverType",
+                           "Group":  "Plot",
+                           "TableName":  "PlotCustomMeasurements",
+                           "FieldName":  "UnderCoverType",
+                           "Label":  "Under Cover",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|UnderDensityClass",
+                           "Group":  "Plot",
+                           "TableName":  "PlotCustomMeasurements",
+                           "FieldName":  "UnderDensityClass",
+                           "Label":  "Under Density",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotCustomMeasurements|UnderSizeClass",
+                           "Group":  "Plot",
+                           "TableName":  "PlotCustomMeasurements",
+                           "FieldName":  "UnderSizeClass",
+                           "Label":  "Under Size",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|CoverType",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "CoverType",
+                           "Label":  "Cover Type",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|Crew",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "Crew",
+                           "Label":  "Crew Name",
+                           "Mode":  "Filled",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|DensityClass",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "DensityClass",
+                           "Label":  "Density Class",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|HabitatType",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "HabitatType",
+                           "Label":  "Habitat Type",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|MeasurementDate",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "MeasurementDate",
+                           "Label":  "Measurement Date",
+                           "Mode":  "Filled",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|PlotStatus",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "PlotStatus",
+                           "Label":  "Plot Status",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|RemarksPlot",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "RemarksPlot",
+                           "Label":  "Plot Remarks",
+                           "Mode":  "Filled",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SIAge",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "SIAge",
+                           "Label":  "SI Age",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SIDBH",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "SIDBH",
+                           "Label":  "SI DBH",
+                           "Mode":  "Range",
+                           "Value":  "0.20",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SIGrowth",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "SIGrowth",
+                           "Label":  "SI Growth",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SISpecies",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "SISpecies",
+                           "Label":  "SI Species",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SITotalHeight",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "SITotalHeight",
+                           "Label":  "SI Total Height",
+                           "Mode":  "Percent",
+                           "Value":  "5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|SizeClass",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "SizeClass",
+                           "Label":  "Size Class",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StandAge",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "StandAge",
+                           "Label":  "Stand Age",
+                           "Mode":  "Percent",
+                           "Value":  "5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StandClass",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "StandClass",
+                           "Label":  "Stand Class",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StockabilityFactor",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "StockabilityFactor",
+                           "Label":  "Stockability Factor",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|PlotMeasurements|StockabilityPct",
+                           "Group":  "Plot",
+                           "TableName":  "PlotMeasurements",
+                           "FieldName":  "StockabilityPct",
+                           "Label":  "Stockability Percent",
+                           "Mode":  "Percent",
+                           "Value":  "5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|Aspect",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "Aspect",
+                           "Label":  "Aspect",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|Elevation",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "Elevation",
+                           "Label":  "Elevation",
+                           "Mode":  "Range",
+                           "Value":  "100",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|PlotNumber",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "PlotNumber",
+                           "Label":  "PlotNumber",
+                           "Mode":  "Filled",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1Azimuth",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree1Azimuth",
+                           "Label":  "Ref Tree 1 Azimuth",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1DBH",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree1DBH",
+                           "Label":  "Ref Tree 1 DBH",
+                           "Mode":  "Range",
+                           "Value":  "0.20",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1Number",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree1Number",
+                           "Label":  "Ref Tree 1 Number",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1SlopeDist",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree1SlopeDist",
+                           "Label":  "Ref Tree 1 SlopeDist",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree1Species",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree1Species",
+                           "Label":  "Ref Tree 1 Species",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2Azimuth",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree2Azimuth",
+                           "Label":  "Ref Tree 2 Azimuth",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2DBH",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree2DBH",
+                           "Label":  "Ref Tree 2 DBH",
+                           "Mode":  "Range",
+                           "Value":  "0.20",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2Number",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree2Number",
+                           "Label":  "Ref Tree 2 Number",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2SlopeDist",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree2SlopeDist",
+                           "Label":  "Ref Tree 2 SlopeDist",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|RefTree2Species",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "RefTree2Species",
+                           "Label":  "Ref Tree 2 Species",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|SlopePercent",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "SlopePercent",
+                           "Label":  "Slope Percent",
+                           "Mode":  "Percent",
+                           "Value":  "5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|SlopePosition",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "SlopePosition",
+                           "Label":  "Slope Position",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|UTMEastingCoordinate",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "UTMEastingCoordinate",
+                           "Label":  "UTM Easting Coordinate",
+                           "Mode":  "Range",
+                           "Value":  "30",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|UTMNorthingCoordinate",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "UTMNorthingCoordinate",
+                           "Label":  "UTM Northing Coordinate",
+                           "Mode":  "Range",
+                           "Value":  "30",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Plot|Plots|UTMZone",
+                           "Group":  "Plot",
+                           "TableName":  "Plots",
+                           "FieldName":  "UTMZone",
+                           "Label":  "UTM Zone",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Regen|RegenMeasurements|IDBH",
+                           "Group":  "Regen",
+                           "TableName":  "RegenMeasurements",
+                           "FieldName":  "IDBH",
+                           "Label":  "IDBH",
+                           "Mode":  "Range",
+                           "Value":  "0.20",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Regen|RegenMeasurements|MinorPlot",
+                           "Group":  "Regen",
+                           "TableName":  "RegenMeasurements",
+                           "FieldName":  "MinorPlot",
+                           "Label":  "Minor Plot",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Regen|RegenMeasurements|RemarksRegen",
+                           "Group":  "Regen",
+                           "TableName":  "RegenMeasurements",
+                           "FieldName":  "RemarksRegen",
+                           "Label":  "Regen Remarks",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Regen|RegenMeasurements|SpeciesCode",
+                           "Group":  "Regen",
+                           "TableName":  "RegenMeasurements",
+                           "FieldName":  "SpeciesCode",
+                           "Label":  "Species",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Regen|RegenMeasurements|StemCount",
+                           "Group":  "Regen",
+                           "TableName":  "RegenMeasurements",
+                           "FieldName":  "StemCount",
+                           "Label":  "Stem Count",
+                           "Mode":  "StemPercent",
+                           "Value":  "Allowance=10; Step=5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|PlotHoot QA|TreeFound",
+                           "Group":  "Tree",
+                           "TableName":  "PlotHoot QA",
+                           "FieldName":  "TreeFound",
+                           "Label":  "Crew-recorded tree found by QA",
+                           "Mode":  "PassFail",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  true
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|BDFTDefect",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "BDFTDefect",
+                           "Label":  "BDFT Defect",
+                           "Mode":  "Percent",
+                           "Value":  "5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|CrownClass",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "CrownClass",
+                           "Label":  "Crown Class",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|CrownRatio",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "CrownRatio",
+                           "Label":  "Crown Ratio",
+                           "Mode":  "Percent",
+                           "Value":  "10",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|CUFTDefect",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "CUFTDefect",
+                           "Label":  "CUFT Defect",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|DMR",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "DMR",
+                           "Label":  "DMR",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|IDBH",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "IDBH",
+                           "Label":  "IDBH",
+                           "Mode":  "Range",
+                           "Value":  "0.20",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|MinorPlot",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "MinorPlot",
+                           "Label":  "Minor Plot",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Problem1",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "Problem1",
+                           "Label":  "Problem 1",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Problem2",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "Problem2",
+                           "Label":  "Problem 2",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|RadialIncrement",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "RadialIncrement",
+                           "Label":  "Radial Increment",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|RemarksTree",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "RemarksTree",
+                           "Label":  "Tree Remarks",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Severity1",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "Severity1",
+                           "Label":  "Severity 1",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|Severity2",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "Severity2",
+                           "Label":  "Severity 2",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|SnagClass",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "SnagClass",
+                           "Label":  "Snag Class",
+                           "Mode":  "Class",
+                           "Value":  "1",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|TotalHeight",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "TotalHeight",
+                           "Label":  "Total Height",
+                           "Mode":  "Percent",
+                           "Value":  "5",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|TreeAge",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "TreeAge",
+                           "Label":  "Tree Age",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|TreeMeasurements|TreeHistory",
+                           "Group":  "Tree",
+                           "TableName":  "TreeMeasurements",
+                           "FieldName":  "TreeHistory",
+                           "Label":  "Tree History",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|Trees|SpeciesCode",
+                           "Group":  "Tree",
+                           "TableName":  "Trees",
+                           "FieldName":  "SpeciesCode",
+                           "Label":  "Species",
+                           "Mode":  "Exact",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       },
+                       {
+                           "FieldKey":  "Tree|Trees|TreeNumber",
+                           "Group":  "Tree",
+                           "TableName":  "Trees",
+                           "FieldName":  "TreeNumber",
+                           "Label":  "TreeNumber",
+                           "Mode":  "Filled",
+                           "Value":  "",
+                           "PointValue":  "1",
+                           "CriticalFail":  false
+                       }
+                   ]
+}
