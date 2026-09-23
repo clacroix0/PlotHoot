@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PlotHoot User Guide</title>
+  <style>
+    body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#f5f7f4;color:#162b28;line-height:1.45}
+    header{background:#1e4744;color:white;padding:28px 34px}
+    main{max-width:980px;margin:0 auto;padding:26px}
+    h1{margin:0;font-size:30px}
+    h2{margin-top:28px;border-bottom:1px solid #d9e1dc;padding-bottom:6px}
+    .meta{color:#d7e7df;margin-top:6px}
+    .panel{background:white;border:1px solid #d9e1dc;border-radius:8px;padding:18px;margin:18px 0}
+    code{background:#eef3ef;padding:2px 5px;border-radius:4px}
+    table{width:100%;border-collapse:collapse;background:white;margin:14px 0}
+    th{background:#1e4744;color:white;text-align:left}
+    th,td{border:1px solid #d9e1dc;padding:9px;vertical-align:top}
+    li{margin:7px 0}
+    .footer{font-size:12px;color:#52615d;margin-top:28px}
+    @media print{body{background:white}main{max-width:none}.panel{border:0}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PlotHoot User Guide</h1>
+    <div class="meta">Offline QA field data checker for BIA CFI databases</div>
+  </header>
+  <main>
+    <section class="panel">
+      <strong>Purpose:</strong> PlotHoot lets a QA observer compare independent field observations against crew-entered database values without changing the database.
+    </section>
+
+    <h2>Platform support</h2>
+    <p>PlotHoot runs on Windows desktops and Windows tablets such as Microsoft Surface. The launchers do not run on Android or iOS. Android and iOS devices can open exported CSV files and offline HTML reports, but they cannot run the PlotHoot app or connect directly to Access <code>.mdb/.accdb</code> databases.</p>
+
+    <h2>Start the app</h2>
+    <ol>
+      <li>Open the <code>PlotHoot</code> folder.</li>
+      <li>When moving PlotHoot to a tablet, copy the entire PlotHoot version folder. Do not copy only <code>PlotHoot.lnk</code>, <code>PlotHoot-Clean.cmd</code>, or <code>Create PlotHoot Desktop Shortcut.cmd</code>; those launchers need the <code>PlotHoot App Files</code> folder beside them.</li>
+      <li>An owl loading screen appears while PlotHoot prepares the app window.</li>
+      <li>For normal field use, double-click <code>PlotHoot.lnk</code>. The shortcut starts PlotHoot hidden through Windows PowerShell and uses the included PlotHoot icon.</li>
+      <li>If the folder was copied to a tablet and the shortcut has no icon or does not open, run <code>Create PlotHoot Desktop Shortcut.cmd</code> once while signed into that tablet account. It repairs the parent-folder shortcut and creates a desktop shortcut with the PlotHoot icon for that Windows user. Run it once for the guest account and once for the admin account if both need shortcuts.</li>
+      <li>For security review or visible troubleshooting, use <code>PlotHoot-Clean.cmd</code>. This launcher does not use VBS, encoded payloads, or dynamic script blocks. It uses a per-launch execution-policy bypass so locked-down tablet or guest accounts can start PlotHoot without changing Windows policy or needing admin rights. It opens a command window and may sit for a few seconds while PlotHoot starts; that is expected for this troubleshooting launcher.</li>
+      <li>You can also start the app directly with <code>PlotHoot App Files\PlotHoot.vbs</code>.</li>
+      <li>The app files also include the backup launcher <code>PlotHoot App Files\PlotHoot-Backup.vbs</code>.</li>
+      <li>For troubleshooting, run <code>PlotHoot App Files\Run-PlotHoot-32bit.bat</code> so any error message stays visible.</li>
+      <li>The old one-file tablet launcher has been removed from the app package. Android and iOS can still open exported reports, but they cannot run the Windows app.</li>
+    </ol>
+
+    <h2>Connect to a database</h2>
+    <ol>
+      <li>Click <code>Browse</code>.</li>
+      <li>Choose the master or project Access database.</li>
+      <li>Click <code>Load Completed Plots</code> to load only plots with <code>InventoryAssignmentPlots.StatusID = 4</code> into the dropdown. Use <code>Load All Plots</code> only when you need a plot that has not been marked completed.</li>
+      <li>PlotHoot reads the plot list and active AppColumns fields. It does not edit the database.</li>
+    </ol>
+
+    <h2>Load a plot</h2>
+    <ol>
+      <li>Type the plot number directly in the <code>Plot #</code> box, or use the optional dropdown/autocomplete list.</li>
+      <li>Press <code>Enter</code> in the plot box or click <code>Load plot</code>.</li>
+      <li>The Plot Data tab fills with crew values and blank QA value cells. Crew, measurement day/date, and plot number use a simple filled-in checkbox check that starts unchecked until the QA user marks it. Plot, tree, and regen remarks are not tolerance items.</li>
+      <li>Plot, tree, and regen fields follow saved custom field order first. If no custom order is saved, they follow the database measurement query column order when available: <code>GetPlotMeasurementsForPeriod</code>, <code>GetTreeMeasurementsForPeriodByKey</code>, and <code>GetRegenMeasurements</code>. If Access cannot expose a query order, PlotHoot falls back to AppColumns order.</li>
+      <li>Double-click a <code>Crew value</code> cell to open a larger read-only box for long database text such as plot remarks.</li>
+      <li>Enter QA values beside the crew values. The Status column updates to Pass or Fail.</li>
+    </ol>
+
+    <h2>Check tree and regen data</h2>
+    <p>Plot data has one check grid. Tree and regen checks are prepared automatically when the plot loads.</p>
+    <ol>
+      <li>Open the Tree Data tab.</li>
+      <li>All field-collected trees for the loaded plot are already loaded.</li>
+      <li>Use the tree dropdown, <code>Previous tree</code>, and <code>Next tree</code> to move through the plot.</li>
+      <li>Leave <code>Show selected tree only</code> checked for a clean one-tree-at-a-time worksheet.</li>
+      <li>Enter QA values beside the crew values for the selected tree.</li>
+      <li>Use <code>Crew-recorded tree found by QA</code> to confirm that a tree already recorded by the crew was found by the QA cruiser.</li>
+      <li>If the QA cruiser finds a tally tree the crew missed, check <code>Crew missed tree(s) found by QA</code>, then open the <code>Missed Trees</code> tab and add DBH, distance to plot center, azimuth to plot center, and notes. Any crew-missed tree is an automatic plot failure.</li>
+      <li>Repeat until the progress label shows the tree is complete, then move to the next tree.</li>
+      <li>Use the Regen Data tab to review all loaded regen records together. The <code>Entry</code> column shows which regen record each row belongs to. <code>Previous regen</code> and <code>Next regen</code> can still jump to a specific regen record.</li>
+    </ol>
+
+    <h2>Large plots</h2>
+    <p>Plots with 100 or more trees stay manageable because the Tree Data tab hides other trees by default. Regen records are shown together by default. Hidden rows from optional filters are still part of the plot QA record and are included when you save or export.</p>
+
+    <h2>Location and execution checks</h2>
+    <p>The Location / Execution tab captures Table D from the check form, excluding <code>Plot Tally Sheets Neatness/Legibility</code>. These rows use the <code>GoodFairPoor</code> tolerance in Tolerance Setup.</p>
+    <p><code>Good</code> is always 0 point loss. <code>Fair</code> and <code>Poor</code> use the point loss written in the Tolerance Setup Value cell, such as <code>Good=0; Fair=1; Poor=2</code>. If Fair should still pass for an item, set <code>Fair=0</code>.</p>
+    <p>A <code>Poor</code> rating becomes an automatic plot failure when <code>Critical fail</code> is checked for that row. GPS defaults to <code>Good=0; Fair=0; Poor=0</code> with <code>Critical fail</code> checked, so only GPS marked <code>Poor</code> forces the plot to fail.</p>
+
+    <h2>Tablet keyboard</h2>
+    <p>On Windows tablets, numeric QA fields, species/code fields, tolerance values, points, and max-loss boxes request the number keyboard. Text, notes, remarks, and pass/fail-style fields request the normal text keyboard.</p>
+    <p>Tap a typed QA value cell once to start editing. After entering a QA value, press <code>Enter</code>, <code>Next</code>, or <code>Tab</code> on the keyboard to save that value and move straight down to the next QA value field, ready for typing. Checkbox checks are marked by tapping the checkbox. Tree and regen tabs advance to the next selected tree or regen record when the last visible field is complete.</p>
+
+    <h2>Set tolerances</h2>
+    <p>Open the Tolerance Setup tab to review and adjust the tolerance for each loaded field. Field rows come from checked active <code>AppColumns</code> fields when AppColumns is available. PlotHoot skips office/system fields such as IDs, <code>GMP</code>, <code>Calc</code> fields, per-acre expansion, FLC commercial, Management Unit, and plot/tree/regen remarks.</p>
+    <p>Use the <code>Show</code> filter to view only Plot, Tree, Regen, or Location / Execution rules. Uncheck <code>Use</code> to remove a field from loaded QA rows for this setup, then click <code>Save setup</code>.</p>
+    <p>Hover over a control, or press-and-hold with touch, to see short tooltips for settings, scoring, and export fields.</p>
+    <p>Tap any grid column header to sort A-Z or small-to-large. Tap the same header again to reverse the sort.</p>
+    <p>To customize field order, drag the far-left <code>Move</code> handle directly on Plot Data, Tree Data, or Regen Data. You can also drag the <code>Field</code> cell. Moving a tree or regen field applies that field order to every loaded tree or regen entry. PlotHoot saves the new order automatically for future loaded plots. Full QA CSV exports include the saved field order so another tablet can import the same setup and restore the moved layout. <code>Reset defaults</code> clears saved custom order and returns to the database query/AppColumns order.</p>
+    <table>
+      <thead><tr><th>Mode</th><th>Use for</th><th>Value example</th></tr></thead>
+      <tbody>
+        <tr><td>Exact</td><td>Codes or text that must match exactly. The Value cell is gray and uneditable.</td><td>blank</td></tr>
+        <tr><td>Range</td><td>Fixed plus/minus numeric range, such as DBH, UTM, or elevation.</td><td>0.20 for DBH, 30 for UTM feet, 100 for elevation</td></tr>
+        <tr><td>Percent</td><td>Height-style fields use relative percent around the crew value. Fields already recorded as percentages or ratios, such as Slope Percent and Crown Ratio, use plus/minus percentage points.</td><td>5 for height, 10 for crown ratio</td></tr>
+        <tr><td>Class</td><td>Ordered classes like crown class.</td><td>1</td></tr>
+        <tr><td>StemCount</td><td>Used when <code>Use Stem Count Percentage For Scoring</code> is unchecked. It uses the editable Regen stem count tolerances table. The QA cruiser count is presumed correct and chooses the count range. Blank tolerance cells require an exact match.</td><td>blank</td></tr>
+        <tr><td>StemPercent</td><td>Used when <code>Use Stem Count Percentage For Scoring</code> is checked. The first allowance percent is free, then each started step percent above the allowance adds the row Points as point loss.</td><td>Allowance=10; Step=5, Points=2</td></tr>
+        <tr><td>PassFail</td><td>Fields recorded as pass/fail, yes/no, true/false.</td><td>blank</td></tr>
+        <tr><td>Filled</td><td>Checkbox check that the crew/database value was supplied. Filled checkboxes start unchecked. Plot number, crew, measurement day/date, and tree number default to this.</td><td>blank</td></tr>
+        <tr><td>GoodFairPoor</td><td>Location / Execution Good/Fair/Poor ratings.</td><td>Good=0; Fair=1; Poor=2, or Fair=0 when Fair should pass</td></tr>
+      </tbody>
+    </table>
+    <p>For regen stem counts, use the Tolerance Setup <code>Use Stem Count Percentage For Scoring</code> checkbox. When it is unchecked, PlotHoot uses the sliding stem-count tolerance table. When it is checked, PlotHoot disables that table and uses the percentage-basis method: the default Value <code>Allowance=10; Step=5</code> allows the first 10% error, then charges the row's <code>Points</code> for each started 5% above that allowance. Example: crew count 5 and QA count 7 is about 29% error; 29 - 10 = 19; 19 / 5 rounds up to 4 steps; with Points = 2, point loss is 8.</p>
+    <p>The Regen stem count tolerances table is used only when <code>Use Stem Count Percentage For Scoring</code> is unchecked. It sets the allowed plus/minus stem difference for each QA cruiser stem-count range. The QA value entered on the Regen tab is presumed correct, and the crew value is compared against it. When percentage scoring is checked, the table is completely disabled/gray because it is not used. The checkbox choice and table values save locally and are included in setup exports/imports.</p>
+    <p>Tree <code>IDBH</code> values stored as whole-number tenths are compared as inches. For example, crew <code>60</code> and QA <code>62</code> are treated as 6.0 and 6.2 inches, so they pass with <code>Range 0.20</code>. Regen IDBH defaults to <code>Exact</code>.</p>
+    <p>Already-percent fields are compared by percentage points. For example, Slope Percent crew <code>40</code> and QA <code>45</code> pass with <code>Percent 5</code>.</p>
+    <p>Example: to allow elevation within plus/minus 100 feet, set Elevation to <code>Range</code> and set Value to <code>100</code>.</p>
+    <p>Most field <code>Points</code> start from <code>AppColumns.QApoints</code>. You can edit <code>Points</code> in Tolerance Setup or directly in a loaded Plot, Tree, or Regen QA table for the current QA work. Location / Execution points come from the <code>GoodFairPoor</code> Value, such as <code>Good=0; Fair=1; Poor=2</code>. A failed non-critical row adds its points to total point loss. A failed critical row forces the plot to fail.</p>
+    <p><code>Fail cutoff</code> is optional. It is the total point-loss cutoff for the whole plot. When it is blank, PlotHoot does not use a total point-loss cutoff; critical failures and any section maxes you enter can still fail the plot. If you enter 25, total error greater than 25 fails the plot. Older notes may call this <code>loss cutoff</code>.</p>
+    <p><code>Plot max loss</code>, <code>Tree max loss</code>, <code>Regen max loss</code>, and <code>Table D max loss</code> are optional section caps. Leave a section max blank to let PlotHoot use the loaded row point sum for that section. Regen max loss is optional whether stem-count table scoring or stem-count percentage scoring is selected.</p>
+    <p>When <code>Tree max loss</code> is filled in, it is multiplied by the number of loaded trees on the plot. Example: 22 max points per tree and 2 trees gives a <code>Tree total max loss</code> of 44; more than 44 tree point loss fails the plot.</p>
+    <p>In the Summary of Check Cruise, <code>Total max point loss</code> is the section max sum. Blank section maxes show the loaded row point sum, and a blank failure threshold shows <code>Not set</code>.</p>
+    <p><code>Crew-recorded tree found by QA</code> is added automatically to each loaded crew tree. It uses <code>PassFail</code> and <code>Critical fail</code> by default. Enter <code>Pass</code> or <code>Yes</code> when the crew-recorded tree is found, or <code>Fail</code> or <code>No</code> when that crew-recorded tree is missing.</p>
+    <p>If a Location / Execution Value cell is edited, PlotHoot reformats it back to the <code>Good=0; Fair=1; Poor=2</code> style so the Good/Fair/Poor labels stay visible.</p>
+    <p>Click <code>Save setup</code> to keep the tolerance, scoring, Use-field choices, stem scoring choice, stem table values, and field-order choices on that tablet or desktop. PlotHoot stores them in <code>Data\PlotHootSettings.json</code> beside the app when possible. If Windows blocks writing there, PlotHoot uses the current user's local app data folder.</p>
+
+    <h2>Save QA for a plot</h2>
+    <ol>
+      <li>Open Review / Export.</li>
+      <li>Enter the required check cruiser name, check cruise date, and plot-level QA remarks.</li>
+      <li>Click <code>Save QA</code> in Review / Export.</li>
+      <li>The saved plot appears in the Review / Export list.</li>
+    </ol>
+    <p>The overall status is <code>Incomplete</code> until the loaded plot check is complete. The status line shows total error, the optional fail cutoff, failed check rows, and unchecked rows. Failed check rows are individual field/check rows with <code>Fail</code> status, not failed plots. A critical failure changes the plot status to <code>Fail</code>, and a completed plot fails if total error is greater than a filled-in failure threshold or a section goes over its configured max.</p>
+    <p><code>Save QA</code> stores the current plot check even when it is incomplete. The check cruiser name, check cruise date, and QA remarks are saved per plot and included in exports. To finish a plot, fill every required QA row on Plot Data, Tree Data, Regen Data, and Location / Execution. Once there are no unchecked rows, the status changes to <code>Pass</code> or <code>Fail</code>; PlotHoot does not use a separate <code>Complete</code> status.</p>
+
+    <h2>BIA inventory QA progress</h2>
+    <p>The Review / Export tab includes a BIA inventory QA progress tracker. It counts saved checked plots against all plots in the connected inventory, uses the 10 percent target, and rounds the required number of plots up to the next whole plot.</p>
+
+    <h2>Project name</h2>
+    <p>After connecting, PlotHoot shows the project name in the header. CSV and HTML exports include the same project name. If the database does not provide a project-name field, PlotHoot uses the database filename and removes trailing date, version, and database text.</p>
+
+    <h2>Export and import</h2>
+    <ul>
+      <li><code>Export QA CSV</code> saves every field check for every saved plot and includes setup/tolerance/scoring/Use-field/field-order rows. Moved field order and removed-field choices are saved in setup rows and also carried on QA rows as a fallback. Rows include <code>ProjectName</code>, check cruiser, and check cruise date.</li>
+      <li><code>Export QA Results</code> saves an Excel <code>.xlsx</code> file with real tabs: Summary, Passed Plots, Failed Plots, Audited Plot Data, Audited Tree Data, Audited Regen Data, Audited Location Data, and Setup Settings.</li>
+      <li><code>Import QA CSV</code> reloads a prior PlotHoot CSV and restores setup/tolerance/scoring/field-order settings from rows marked <code>Setting</code>.</li>
+      <li><code>Failed CSV</code> saves only failed plots, project name, BIA inventory QA progress, remarks, UTM values, and failed field summaries.</li>
+      <li><code>QA Report HTML</code> saves a formatted offline report with a summary page, passed plot tab, failed plot tab, audited plot data tab, audited tree data tab, audited regen data tab, and audited location data tab. Each report table can be filtered and sorted in the browser.</li>
+    </ul>
+
+    <h2>Field selection</h2>
+    <p>PlotHoot uses checked active fields from <code>AppColumns</code> when that table is available. It skips database IDs, row keys, update fields, <code>GMP</code>, fields beginning with <code>Calc</code>, Management Unit, plot/tree/regen remarks, <code>PlotNumber</code> in Tree/Regen Data, and <code>RealDBH</code> in Tree Data. To remove a project-specific field on the fly, uncheck <code>Use</code> on the Tolerance Setup tab and click <code>Save setup</code>.</p>
+
+    <h2>Offline and safety notes</h2>
+    <ul>
+      <li>No internet connection is required.</li>
+      <li>No admin rights are required.</li>
+      <li>The selected database is read-only to PlotHoot.</li>
+      <li>QA data is saved only when exported to CSV or HTML.</li>
+    </ul>
+
+    <div class="footer">Created by Christopher LaCroix.<br>Developed by BIA Division of Forestry, Branch of Inventory and planning.</div>
+  </main>
+</body>
+</html>
