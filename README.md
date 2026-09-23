@@ -4,7 +4,13 @@ PlotHoot is a 100% offline Windows desktop app for QA field checks against BIA C
 
 ## Application screenshot
 
-![PlotHoot main application window showing the offline QA workflow](Assets/plot-hoot-main.png)
+## Application screenshot
+
+<p align="center">
+  <a href="docs/images/plot-hoot-main.png">
+    <img src="docs/images/plot-hoot-main.png" alt="PlotHoot 1.0.03 main application window" width="1200">
+  </a>
+</p>
 
 ## Platform support
 
